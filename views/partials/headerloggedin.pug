@@ -1,0 +1,13 @@
+style 
+    include ../../public/header.css
+
+div#header
+    a(href="/") Home
+    |
+    a(href="/users") Users
+    |
+    a(href="/order") Order Form
+    |
+    a(href="/users/" + result.userID) Profile
+    |
+    a(href="/logout") Logout

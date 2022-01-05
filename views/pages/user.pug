@@ -1,0 +1,36 @@
+html 
+    head 
+        title Restaurants | User
+        script(src="../client.js")
+        style 
+            include ../../public/client.css
+
+    body 
+
+        if (isLoggedIn)
+            include ../partials/headerloggedin
+
+        else 
+            include ../partials/headerloggedout
+
+        h1="Name: " + userFound.username
+
+        if (isOwner)
+
+            p="Set Privacy"
+            label(for='radio_buttons1') Yes
+            input(type='radio', name='radio_selected', value='1', id='radio_buttons1')
+            label(for='radio_buttons2') No
+            input(type='radio', name='radio_selected', value='2', id='radio_buttons2')
+            <br>
+            button#updatePrivacy(type="button" onclick="updatePrivacy()") Update Privacy
+
+        if (ordersByUser && ordersByUser.length > 0)
+            h3="Order history:"
+            for order in ordersByUser 
+                li
+                    a(href=`/orders/${order._id}`)=order._id 
+
+
+        else 
+            p="No order history was found."

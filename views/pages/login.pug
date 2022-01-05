@@ -1,0 +1,20 @@
+doctype html
+html
+    head 
+        title Restaurants | Login 
+        script(src="client.js")
+        style 
+            include ../../public/client.css
+
+    body 
+
+        include ../partials/headerloggedout
+
+        h1 Login
+
+        p Username:
+            input#username(type="textbox")
+        p Password: 
+            input#password(type="textbox")
+
+        button#logInButton(type="button" onclick="login()") Log In

@@ -1,0 +1,22 @@
+html 
+    head 
+        title Restaurants | Users
+        style
+            include ../../public/client.css
+
+    body
+
+        if (isLoggedIn)
+            include ../partials/headerloggedin
+        else 
+            include ../partials/headerloggedout
+
+        h1="Users"
+        
+        if (usersToSend && usersToSend.length > 0)
+
+            for user in usersToSend 
+                li 
+                    a(href=`/users/${user._id}`)=user.username 
+        else 
+            p="No users we're found."

@@ -1,0 +1,20 @@
+doctype html
+html
+    head 
+        title Restaurants | Register
+        script(src="client.js")
+        style 
+            include ../../public/client.css
+
+    body 
+
+        include ../partials/headerloggedout
+
+        h1 Register New User 
+
+        p Username:
+            input#username(type="textbox")
+        p Password: 
+            input#password(type="textbox")
+
+        button#logInButton(type="button" onclick="registerUser()") Register User

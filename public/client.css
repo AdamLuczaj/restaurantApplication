@@ -1,0 +1,17 @@
+h1 {
+    text-align: center;
+    color: white;
+    background-color: green;
+    font-style: italic;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+    background-color: red;
+    font-style: italic;
+}
+
+p {
+    font-size: 18px;
+}

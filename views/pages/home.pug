@@ -1,0 +1,21 @@
+doctype html 
+html 
+    head 
+        title Restaurants | Home 
+        style
+            include ../../public/client.css
+    
+    body 
+
+        if (isLoggedIn) 
+            include ../partials/headerloggedin
+        
+        else 
+            include ../partials/headerloggedout
+
+        h1="Welcome to The Neighbourhood Restaurants Website!"
+
+        if (isLoggedIn)
+            p="You are logged in! To place an order select order form, to view your profile press profile."
+        else 
+            p="You are not currently logged in! To register as a new user press Register New User."

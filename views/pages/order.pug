@@ -1,0 +1,22 @@
+html 
+    head 
+        title Restaurants | Order 
+        style 
+            include ../../public/client.css
+    body 
+
+        if (isLoggedIn)
+            include ../partials/headerloggedin
+        else 
+            include ../partials/headerloggedout
+        
+        h1="User Ordered: " + oneOrder.username 
+        h3="Restaurant: " + oneOrder.restaurant
+        h2="Order Summary" 
+        for element in oneOrder.order
+            h3=element.name + ": " + element.quantity
+        h2="Price Summary"
+        h3="Subtotal: $" + oneOrder.subtotal.toFixed(2)
+        h3="Tax: $" + oneOrder.tax.toFixed(2) 
+        h3="Delivery fee: $" + oneOrder.fee.toFixed(2)
+        h3="Total: $" + oneOrder.total.toFixed(2)
